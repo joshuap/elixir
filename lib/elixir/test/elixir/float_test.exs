@@ -32,6 +32,7 @@ defmodule FloatTest do
     assert Float.parse("--1.2") === :error
     assert Float.parse("++1.2") === :error
     assert Float.parse("pi") === :error
+    assert Float.parse("12.345e308") === :error
   end
 
   test "floor" do
